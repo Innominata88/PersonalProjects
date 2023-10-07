@@ -57,6 +57,9 @@ class OctetStructure {
     const octet = document.createElement('div');
     octet.classList.add('octet', `octet-${this.octetNumber}`);
 
+    const bitLabelContainer = document.createElement('div');
+    bitLabelContainer.classList.add('octet');
+
     for (let i = 7; i >= 0; i--) {
       const bitButton = document.createElement('button');
       bitButton.classList.add('bit');
@@ -64,15 +67,10 @@ class OctetStructure {
       bitButton.title = Math.pow(2, i).toString();
       bitButton.addEventListener('click', () => this.toggleBit(bitButton, i));
       octet.appendChild(bitButton);
-    }
 
-    const bitLabelContainer = document.createElement('div');
-    bitLabelContainer.classList.add('octet');
-
-    for (let i = 0; i < 8; i++) {
       const bitLabel = document.createElement('span');
       bitLabel.classList.add('bitlabel');
-      bitLabel.textContent = (i + (8 * (this.octetNumber - 1))).toString();
+      bitLabel.textContent = ((8 * (this.octetNumber - 1)) + (7 - i)).toString();
       bitLabelContainer.appendChild(bitLabel);
     }
 
