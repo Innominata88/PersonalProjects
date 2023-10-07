@@ -75,7 +75,8 @@
     position: relative;
 }
 
-.octet-textbox:hover {
+/* https://stackoverflow.com/questions/24287192/css-change-parent-on-focus-of-child */
+.octet-textbox:focus-within  {
     box-shadow: inset 0 0 0 1.5px;
 }
 
@@ -87,8 +88,7 @@
     font-size: inherit;
     color: var(--text-color);
   }
-  
-  
+
 .octet-clear-button {
     position: absolute;
     top: 50%;
@@ -96,6 +96,7 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
+
 
 /* Style octets and bits */
 .octet {
@@ -119,6 +120,7 @@
     padding: 0px;
     line-height: 0px;
     font-size: 8pt;
+    outline: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
 }
@@ -155,6 +157,10 @@
     color: var(--darker-accent-color);
   }
 
+.octet.octet-1 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--pink-on-color);
+}
+
 .octet-container.octet-1 {
     color: var(--pink-on-color); 
     border-color: var(--pink-on-color); 
@@ -170,6 +176,10 @@
     background-color: var(--blue-on-color);
     color: var(--darker-accent-color);
   }
+
+.octet.octet-2 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--blue-on-color);
+}
 
 .octet-container.octet-2 {
     color: var(--blue-on-color);
@@ -187,6 +197,10 @@
     color: var(--darker-accent-color);
   }
 
+.octet.octet-3 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--yellow-on-color);
+}
+
 .octet-container.octet-3 {
     color: var(--yellow-on-color);
     border-color: var(--yellow-on-color);
@@ -202,6 +216,10 @@
     background-color: var(--purple-on-color);
     color: var(--darker-accent-color);
   }
+
+.octet.octet-4 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--purple-on-color);
+}
 
 .octet-container.octet-4 {
     color: var(--purple-on-color);

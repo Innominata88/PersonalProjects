@@ -37,6 +37,7 @@ class OctetStructure {
     
     const inputField = document.createElement('input');
     inputField.setAttribute('type', 'text');
+    inputField.setAttribute('tabindex', this.octetNumber);
     inputField.classList.add('octet-input-field');
     inputField.addEventListener('focus', (e) => this.clearZeroOnFocus(e.target));
     inputField.addEventListener('blur', (e) => this.resetEmptyOctetValue(e.target));
@@ -64,13 +65,14 @@ class OctetStructure {
       const bitButton = document.createElement('button');
       bitButton.classList.add('bit');
       bitButton.textContent = '0';
-      bitButton.title = Math.pow(2, i).toString();
+      bitButton.title = Math.pow(2, i);
       bitButton.addEventListener('click', () => this.toggleBit(bitButton, i));
       octet.appendChild(bitButton);
 
       const bitLabel = document.createElement('span');
+      const bitNumber = (8 * (this.octetNumber - 1)) + (7 - i);
       bitLabel.classList.add('bitlabel');
-      bitLabel.textContent = ((8 * (this.octetNumber - 1)) + (7 - i)).toString();
+      bitLabel.textContent = bitNumber;
       bitLabelContainer.appendChild(bitLabel);
     }
 
@@ -147,7 +149,6 @@ class OctetStructure {
         }
     }
 
-    /* */
     clearZeroOnFocus(octetField) {
         if (this.octetValue === 0) {
             octetField.value = "";
@@ -155,7 +156,7 @@ class OctetStructure {
     }
 
     resetEmptyOctetValue(octetField) {
-        if (this.octetField === "") {
+        if (octetField.value === "") {
             octetField.value = this.getDisplayOctet();
         }
     }
