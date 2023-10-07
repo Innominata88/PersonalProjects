@@ -23,11 +23,18 @@
 
 .ip-input-container {
     display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.octet-group {
+    display: flex;
+    flex-wrap: nowrap;
     gap: 5px;
 }
 
 .dot-div {
-    display: flex;
+    display: inline-block;
     font-family: "Trebuchet MS";
     font-size: 14px;
     color: var(--text-color);
@@ -58,7 +65,7 @@
     width: 148px;
     padding: 5px;
     font-size: 12px;
-    background-color: #131313;
+    background-color: var(--darker-accent-color);
     color: inherit;
     border-color: inherit;
     border-style: solid;
@@ -92,15 +99,16 @@
 
 /* Style octets and bits */
 .octet {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-right: 0px;
     text-align: center;
-    background-color: var(--darker-accent-color)
+    background-color: inherit;
 }
 
 .octet .bit {
     float: left;
-    background-color: inherit;
+    background-color: var(--darker-accent-color);
     color: inherit;
     border-color: inherit;
     border-style: solid;
@@ -121,21 +129,19 @@
 
 /* Style for toggled-on buttons */
 .octet .bit.active {
-    color: #FFFFFF; /* Text color for bit button on state */
+    color: var(--text-color); /* Text color for bit button on state */
 }
 
 .octet .bitlabel {
-    float: left;
+    float: none;
     background-color: var(--background-color);
-    color: #FFFFFF;
-    border-color: var(--background-color);
-    border-style: solid;
-    border-width: 1px;
+    color: var(--text-color);
+    border: none;
     width: 20px;
     height: 20px;
     margin: 0;
     padding: 0px;
-    line-height: 0px;
+    line-height: 20px;
     font-size: 6pt;
 }
 
