@@ -1,0 +1,205 @@
+:root {
+    --pink-on-color: #FF89B2;
+    --pink-off-color: #99556F;
+
+    --purple-on-color: #BD86FF;
+    --purple-off-color: #6F5299;
+
+    --blue-on-color: #00FFE0;
+    --blue-off-color: #009983;
+
+    --yellow-on-color: #FFC655;
+    --yellow-off-color: #997733;
+
+    --green-on-color: #00FF93;
+    --green-off-color: #009953;
+
+    --background-color: #212121;
+    --darker-accent-color: #131313;
+    --lighter-accent-color: #383838;
+    --lightest-accent-color: #A5A5A5;
+    --text-color: #FFFFFF;
+  }
+
+.ip-input-container {
+    display: flex;
+    gap: 5px;
+}
+
+.dot-div {
+    display: flex;
+    font-family: "Trebuchet MS";
+    font-size: 14px;
+    color: var(--text-color);
+    align-content: center;
+    text-align: center;
+    line-height: 65px;
+}
+
+/* Style for octet containers */
+.octet-container {
+    text-align: center;
+    margin-bottom: 15px; /* Add margin for spacing between octet containers */
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS";
+    color: transparent;
+    outline-color: transparent;
+}
+
+.octet-header {
+    color: inherit;
+    text-align: left;
+    font-size: 7pt;
+}
+
+/* Style for text boxes */
+.octet-textbox {
+    width: 148px;
+    padding: 5px;
+    font-size: 12px;
+    background-color: #131313;
+    color: inherit;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px;
+    outline:0;
+    margin-bottom: 5px; /* Add margin between the octet text box and bit buttons */
+    position: relative;
+}
+
+.octet-textbox:hover {
+    box-shadow: inset 0 0 0 1.5px;
+}
+
+.octet-input-field {
+    width: 85%;
+    background-color: inherit;
+    border: none;
+    outline: 0;
+    font-size: inherit;
+    color: var(--text-color);
+  }
+  
+  
+.octet-clear-button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+/* Style octets and bits */
+.octet {
+    display: inline-block;
+    margin-right: 0px;
+    text-align: center;
+    background-color: var(--darker-accent-color)
+}
+
+.octet .bit {
+    float: left;
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0px;
+    line-height: 0px;
+    font-size: 8pt;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.octet .bit:not(:first-child) {
+    border-left: none; /* Prevent double borders */
+}
+
+/* Style for toggled-on buttons */
+.octet .bit.active {
+    color: #FFFFFF; /* Text color for bit button on state */
+}
+
+.octet.octet-1 {
+    color: var(--pink-off-color);
+    border-color: inherit;
+}
+
+.octet.octet-1 .bit:hover {
+    background-color: var(--pink-on-color);
+    color: var(--darker-accent-color);
+  }
+
+.octet-container.octet-1 {
+    color: var(--pink-on-color); 
+    border-color: var(--pink-on-color); 
+    box-shadow: inset 0 0 0 0px var(--pink-on-color);
+}
+
+.octet.octet-2 {
+    color: var(--blue-off-color);
+    border-color: inherit;
+}
+
+.octet.octet-2 .bit:hover {
+    background-color: var(--blue-on-color);
+    color: var(--darker-accent-color);
+  }
+
+.octet-container.octet-2 {
+    color: var(--blue-on-color);
+    border-color: var(--blue-on-color);
+    box-shadow: inset 0 0 0 0px var(--blue-on-color);
+}
+
+.octet.octet-3 {
+    color: var(--yellow-off-color);
+    border-color: inherit;
+}
+
+.octet.octet-3 .bit:hover {
+    background-color: var(--yellow-on-color);
+    color: var(--darker-accent-color);
+  }
+
+.octet-container.octet-3 {
+    color: var(--yellow-on-color);
+    border-color: var(--yellow-on-color);
+    box-shadow: inset 0 0 0 0px var(--yellow-on-color);
+}
+
+.octet.octet-4 {
+    color: var(--purple-off-color);
+    border-color: inherit;
+}
+
+.octet.octet-4 .bit:hover {
+    background-color: var(--purple-on-color);
+    color: var(--darker-accent-color);
+  }
+
+.octet-container.octet-4 {
+    color: var(--purple-on-color);
+    border-color: var(--purple-on-color);
+    box-shadow: inset 0 0 0 0px var(--purple-on-color);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
