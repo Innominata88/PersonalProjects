@@ -124,6 +124,21 @@
     color: #FFFFFF; /* Text color for bit button on state */
 }
 
+.octet .bitlabel {
+    float: left;
+    background-color: var(--background-color);
+    color: #FFFFFF;
+    border-color: var(--background-color);
+    border-style: solid;
+    border-width: 1px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0px;
+    line-height: 0px;
+    font-size: 6pt;
+}
+
 .octet.octet-1 {
     color: var(--pink-off-color);
     border-color: inherit;
