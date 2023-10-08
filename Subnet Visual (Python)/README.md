@@ -1,0 +1,2 @@
+# Subnet Visual (Python)
+The original horrible code that my Javascript project is attempting to port and finish. I started this project since I like visualizations and figured using IPv4 would be a simple enough idea. This code is very rough and it has gone through three versions before I decided to retire the Python version and attempt to do this as a webapp in JavaScript. I found Tkinter to be very limiting and I had to get very creative in trying to get things to look like I wanted and still had issues.
