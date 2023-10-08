@@ -153,33 +153,25 @@
     border-color: inherit;
 }
 
-.octet.octet-1 .bit:hover {
-    background-color: var(--pink-on-color);
-    color: var(--darker-accent-color);
-  }
-
-.octet.octet-1 .bit:focus {
-    box-shadow: inset 0 0 0 2px var(--pink-on-color);
-}
-
 .octet-container.octet-1 {
     color: var(--pink-on-color); 
     border-color: var(--pink-on-color); 
     box-shadow: inset 0 0 0 0px var(--pink-on-color);
 }
 
+.octet.octet-1 .bit:hover {
+    box-shadow: inset 0 0 0 2em var(--pink-on-color);
+    color: var(--darker-accent-color);
+    transition: box-shadow 0.3s, color 0.3s;
+  }
+
+.octet.octet-1 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--pink-on-color);
+}
+
 .octet.octet-2 {
     color: var(--blue-off-color);
     border-color: inherit;
-}
-
-.octet.octet-2 .bit:hover {
-    background-color: var(--blue-on-color);
-    color: var(--darker-accent-color);
-  }
-
-.octet.octet-2 .bit:focus {
-    box-shadow: inset 0 0 0 2px var(--blue-on-color);
 }
 
 .octet-container.octet-2 {
@@ -188,18 +180,19 @@
     box-shadow: inset 0 0 0 0px var(--blue-on-color);
 }
 
+.octet.octet-2 .bit:hover {
+    box-shadow: inset 0 0 0 2em var(--blue-on-color);
+    color: var(--darker-accent-color);
+    transition: box-shadow 0.3s, color 0.3s;
+  }
+
+.octet.octet-2 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--blue-on-color);
+}
+
 .octet.octet-3 {
     color: var(--yellow-off-color);
     border-color: inherit;
-}
-
-.octet.octet-3 .bit:hover {
-    background-color: var(--yellow-on-color);
-    color: var(--darker-accent-color);
-  }
-
-.octet.octet-3 .bit:focus {
-    box-shadow: inset 0 0 0 2px var(--yellow-on-color);
 }
 
 .octet-container.octet-3 {
@@ -208,24 +201,35 @@
     box-shadow: inset 0 0 0 0px var(--yellow-on-color);
 }
 
+.octet.octet-3 .bit:hover {
+    box-shadow: inset 0 0 0 2em var(--yellow-on-color);
+    color: var(--darker-accent-color);
+    transition: box-shadow 0.3s, color 0.3s;
+  }
+
+.octet.octet-3 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--yellow-on-color);
+}
+
 .octet.octet-4 {
     color: var(--purple-off-color);
     border-color: inherit;
-}
-
-.octet.octet-4 .bit:hover {
-    background-color: var(--purple-on-color);
-    color: var(--darker-accent-color);
-  }
-
-.octet.octet-4 .bit:focus {
-    box-shadow: inset 0 0 0 2px var(--purple-on-color);
 }
 
 .octet-container.octet-4 {
     color: var(--purple-on-color);
     border-color: var(--purple-on-color);
     box-shadow: inset 0 0 0 0px var(--purple-on-color);
+}
+
+.octet.octet-4 .bit:hover {
+    box-shadow: inset 0 0 0 2em var(--purple-on-color);
+    color: var(--darker-accent-color);
+    transition: box-shadow 0.3s, color 0.3s;
+  }
+
+.octet.octet-4 .bit:focus {
+    box-shadow: inset 0 0 0 2px var(--purple-on-color);
 }
 
 body {

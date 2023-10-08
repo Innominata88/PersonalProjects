@@ -14,6 +14,7 @@ class OctetStructure {
     static isValidHex = /^((0x|0X)?[0-9A-Fa-f]{0,2})$/;
     static isValidOctal = /^(0o|0O|0)?([0-3]?[0-7]{0,2})$/;
     static isAlphanumeric = /^[a-zA-Z0-9]$/;
+    static ordinals = ['First', 'Second', 'Third', 'Fourth'];
 
   constructor(container, octetNumber, updateCallback) {
     this.container = container;
@@ -30,7 +31,7 @@ class OctetStructure {
 
     const octetHeader = document.createElement('div');
     octetHeader.classList.add('octet-header');
-    octetHeader.textContent = `Octet ${this.octetNumber}`;
+    octetHeader.textContent = `${OctetStructure.ordinals[this.octetNumber - 1]} Octet`;
     
     const octetTextbox = document.createElement('div');
     octetTextbox.classList.add('octet-textbox');
@@ -190,7 +191,8 @@ class OctetStructure {
     }
 
     validateOctetInputKey(event) {
-        const newValue = event.key === "Backspace" ? event.target.value.slice(0, -1) : event.target.value + (OctetStructure.isAlphanumeric.test(event.key) ? event.key : "");
+        const newValue = event.key === "Backspace" ? event.target.value.slice(0, -1) : 
+                        event.target.value + (OctetStructure.isAlphanumeric.test(event.key) ? event.key : "");
         console.log(newValue);
 
         if(!this.isValidOctetInput(newValue)) {
