@@ -19,6 +19,8 @@
     --lighter-accent-color: #383838;
     --lightest-accent-color: #A5A5A5;
     --text-color: #FFFFFF;
+
+    --bit-box-size: 20px;
   }
 
 .ip-input-container {
@@ -62,7 +64,6 @@
 
 /* Style for text boxes */
 .octet-textbox {
-    width: 148px;
     padding: 5px;
     font-size: 12px;
     background-color: var(--darker-accent-color);
@@ -114,8 +115,8 @@
     border-color: inherit;
     border-style: solid;
     border-width: 1px;
-    width: 20px;
-    height: 20px;
+    width: var(--bit-box-size);
+    height: var(--bit-box-size);
     margin: 0;
     padding: 0px;
     line-height: 0px;
@@ -139,11 +140,11 @@
     background-color: var(--background-color);
     color: var(--text-color);
     border: none;
-    width: 20px;
-    height: 20px;
+    width: var(--bit-box-size);
+    height: var(--bit-box-size);
     margin: 0;
     padding: 0px;
-    line-height: 20px;
+    line-height: var(--bit-box-size);
     font-size: 6pt;
 }
 
